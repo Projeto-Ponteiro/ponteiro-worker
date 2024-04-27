@@ -1,0 +1,6 @@
+@PonteiroWorker_HostAddress = http://localhost:5232
+
+GET {{PonteiroWorker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
