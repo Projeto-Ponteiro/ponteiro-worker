@@ -7,12 +7,12 @@ jobs:
     name: horusec-security
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-      with: # Necessário quando habilitado o autores de commit
-        fetch-depth: 0
-    - name: Running Horusec Security
-    env:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with: # Necessário quando habilitado o autores de commit
+          fetch-depth: 0
+      - name: Running Horusec Security
+        env:
           HORUSEC_REPOSITORY_ACCESS_TOKEN: ${{ secrets.HORUSEC_REPOSITORY_ACCESS_TOKEN }}
           HORUSEC_API_URL: ${{ secrets.HORUSEC_API_URL }}
         run: |
